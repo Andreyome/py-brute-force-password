@@ -42,7 +42,6 @@ def brute_force_passwords():
             res = future.result()
             if res:
                 results.extend(res)
-                print(f"Found: {res}")
 
     return results
 
@@ -51,5 +50,5 @@ if __name__ == "__main__":
     passwords = brute_force_passwords()
     end_time = time.perf_counter()
 
-    print("Passwords:", passwords)
+    print(passwords)
     print("Elapsed:", end_time - start_time)
